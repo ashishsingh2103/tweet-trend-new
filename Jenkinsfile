@@ -6,7 +6,7 @@ pipeline {
         }
     }
 environment {
-    PATH = "/opt/apache-maven-3.9.2/bin:$PATH"
+    PATH = "/opt/apache-maven-3.9.9/bin:$PATH"
 }
     stages {
         stage("build"){
@@ -56,7 +56,7 @@ environment {
                           "files": [
                             {
                               "pattern": "jarstaging/(*)",
-                              "target": "libs-release-local/{1}",
+                              "target": "ttrend-libs-release-local/{1}",
                               "flat": "false",
                               "props" : "${properties}",
                               "exclusions": [ "*.sha1", "*.md5"]
